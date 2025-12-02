@@ -360,9 +360,9 @@
         // It SHOULDN'T pop up if things are working correctly.
         const slowTimer = setTimeout(() => {
           if (!document.getElementById('loader').classList.contains('fade')) {
-            showErr('Loading is taking longer than expected. Please check the API URL or try again.');
+            showErr("Loading is taking longer than expected... Contact the Librarian if you can't find the book you're looking for.");
           }
-        }, 10000);
+        }, 15000);
         // FETCH - Catch error / CORS issues
         fetch(API, { mode: 'cors' })
           .then(r => { if (!r.ok) throw new Error('Network error: ' + r.status); return r.json(); })
